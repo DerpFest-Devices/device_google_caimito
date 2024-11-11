@@ -21,6 +21,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     EuiccSupportPixelOverlay
 
+# Udfps icons
+EXTRA_UDFPS_ICONS := true
+
 # PowerShare
 include hardware/google/pixel/powershare/device.mk
 
