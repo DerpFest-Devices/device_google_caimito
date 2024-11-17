@@ -6,28 +6,28 @@
 
 # Inherit some common stuff
 TARGET_DISABLE_EPPE := true
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 # Inherit device configuration
-DEVICE_CODENAME := komodo
+DEVICE_CODENAME := caiman
 DEVICE_PATH := device/google/caimito
-VENDOR_PATH := vendor/google/komodo
+VENDOR_PATH := vendor/google/caiman
 $(call inherit-product, $(DEVICE_PATH)/aosp_$(DEVICE_CODENAME).mk)
-$(call inherit-product, device/google/zumapro/lineage_common.mk)
-$(call inherit-product, $(DEVICE_PATH)/$(DEVICE_CODENAME)/device-lineage.mk)
+$(call inherit-product, device/google/zumapro/derp_common.mk)
+$(call inherit-product, $(DEVICE_PATH)/$(DEVICE_CODENAME)/device-derp.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
-PRODUCT_MODEL := Pixel 9 Pro XL
-PRODUCT_NAME := lineage_$(DEVICE_CODENAME)
+PRODUCT_MODEL := Pixel 9 Pro
+PRODUCT_NAME := derp_$(DEVICE_CODENAME)
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2992
-TARGET_SCREEN_WIDTH := 1344
+TARGET_SCREEN_HEIGHT := 2856
+TARGET_SCREEN_WIDTH := 1280
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="komodo-user 15 AP3A.241105.008 12485168 release-keys" \
-    BuildFingerprint=google/komodo/komodo:15/AP3A.241105.008/12485168:user/release-keys \
+    BuildDesc="caiman-user 15 AP3A.241105.008 12485168 release-keys" \
+    BuildFingerprint=google/caiman/caiman:15/AP3A.241105.008/12485168:user/release-keys \
     DeviceProduct=$(DEVICE_CODENAME)
 
 $(call inherit-product, $(VENDOR_PATH)/$(DEVICE_CODENAME)-vendor.mk)
