@@ -86,8 +86,12 @@ product/priv-app/AppDirectedSMSService/AppDirectedSMSService.apk;PRESIGNED
 product/priv-app/OemDmTrigger/OemDmTrigger.apk
 product/priv-app/WfcActivation/WfcActivation.apk;PRESIGNED
 
-# system_ext partition
+# system partition
 
+# IMS
+system/bin/oem-iptables-init.sh
+
+# system_ext partition
 
 # Audio
 system_ext/bin/hw/vendor.google.whitechapel.audio.hal.parserservice
