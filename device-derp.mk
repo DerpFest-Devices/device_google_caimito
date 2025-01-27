@@ -21,6 +21,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     EuiccSupportPixelOverlay
 
+# IWLAN
+PRODUCT_PACKAGES += \
+    Iwlan
+
 # Udfps icons
 EXTRA_UDFPS_ICONS := true
 
